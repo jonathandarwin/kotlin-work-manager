@@ -12,10 +12,9 @@ import com.jonathandarwin.workmanagertest.util.NotificationUtil
 class MultiplyWorker(private val context: Context, workerParam: WorkerParameters) : Worker(context, workerParam) {
 
     companion object {
-        val NUM1 = "NUM1"
-        val NUM2 = "NUM2"
-
-        val RESULT = "RESULT"
+        const val NUM1 = "NUM1"
+        const val NUM2 = "NUM2"
+        const val RESULT = "RESULT"
     }
 
     override fun doWork(): Result {

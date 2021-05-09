@@ -11,9 +11,9 @@ import androidx.work.workDataOf
 class AddWorker(context: Context, workerParam: WorkerParameters) : Worker(context, workerParam) {
 
     companion object {
-        val NUM1 = "NUM1"
-        val NUM2 = "NUM2"
-        val NUM3 = "NUM3"
+        const val NUM1 = "NUM1"
+        const val NUM2 = "NUM2"
+        const val NUM3 = "NUM3"
     }
 
     override fun doWork(): Result {

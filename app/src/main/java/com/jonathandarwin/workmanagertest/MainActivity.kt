@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         workManager = WorkManager.getInstance(application)
 
         btnStart.setOnClickListener{
-            hidekeyboard()
+            hideKeyboard()
             try{
                 num1 = etNumber1.text.toString().toInt()
                 num2 = etNumber2.text.toString().toInt()
@@ -97,6 +97,7 @@ class MainActivity : AppCompatActivity() {
 
                     btnCancel.visibility = View.GONE
                 }
+                else -> logWorker("AddWorker on Other State")
             }
         })
 
@@ -109,7 +110,7 @@ class MainActivity : AppCompatActivity() {
 
                     workerId = multiplyWorker.id
                     btnCancel.visibility = View.VISIBLE
-                    btnCancel.text = "Cancel Multiply Worker"
+                    btnCancel.setText("Cancel Multiply Worker")
                 }
                 WorkInfo.State.SUCCEEDED -> {
                     logWorker("MultiplyWorker Succeeded")
@@ -129,6 +130,7 @@ class MainActivity : AppCompatActivity() {
 
                     btnCancel.visibility = View.GONE
                 }
+                else -> logWorker("MultiplyWorker on Other State")
             }
         })
     }
@@ -141,7 +143,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("<WORKER>", message)
     }
 
-    private fun hidekeyboard() {
+    private fun hideKeyboard() {
         val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
         val v = currentFocus
 

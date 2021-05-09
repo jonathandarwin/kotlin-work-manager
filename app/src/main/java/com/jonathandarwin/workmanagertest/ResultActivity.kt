@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_result.*
 class ResultActivity : AppCompatActivity() {
 
     companion object {
-        val EXTRA_RESULT = "EXTRA_RESULT"
+        const val EXTRA_RESULT = "EXTRA_RESULT"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
