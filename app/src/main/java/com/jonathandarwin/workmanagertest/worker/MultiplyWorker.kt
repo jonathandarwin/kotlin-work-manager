@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
-import com.jonathandarwin.workmanagertest.NotificationUtil
+import com.jonathandarwin.workmanagertest.util.NotificationUtil
 
 /**
  * Created By : Jonathan Darwin on May 09, 2021
