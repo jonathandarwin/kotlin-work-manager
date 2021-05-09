@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 startTask()
             }
             catch (e: Exception) {
-
+                showToast(e.message ?: "Error Please try again")
             }
         }
 
