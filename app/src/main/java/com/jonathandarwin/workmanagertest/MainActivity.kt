@@ -51,6 +51,12 @@ class MainActivity : AppCompatActivity() {
                 showToast("Work Cancelled")
             }
         }
+
+        btnNavigateToAppendWorker.setOnClickListener {
+            startActivity(
+                Intent(this, AppendWorkerActivity::class.java)
+            )
+        }
     }
 
     private fun startTask() {
